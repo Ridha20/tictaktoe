@@ -1,0 +1,33 @@
+
+.cell{
+    width: 60px;
+    height: 60px;
+    border: 2px solid; 
+    background-color: rgb(141, 44, 141);
+    box-shadow: 0 0 0 1px purple;
+    font-size: 50px;
+}
+#gameContainer{
+    font-family: Times;
+    text-align: center;
+}
+#cellContainer{
+    display: grid;
+    grid-template-columns:  repeat(3,auto); 
+    grid-gap: 10px;
+    width: 225px;
+    margin: auto;
+    
+ 
+}
+
+#restartBtn{
+    background: pink;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+   
+}
+#restartBtn:hover{
+    background-color: rgb(141, 44, 141);
+}
