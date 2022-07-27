@@ -20,7 +20,6 @@ initializeGame();
 function initializeGame(){
     cells.forEach(cell => cell.addEventListener("click", cellClicked));
     restartBtn.addEventListener("click", restartGame);
-    /*displayres.textContent = `${currentPlayer}'s turn`;*/
     running = true;
 }
 function cellClicked(){
@@ -39,8 +38,10 @@ function updateCell(cell, index){
 }
 function changePlayer(){
     currentPlayer = (currentPlayer == "X") ? "O" : "X";
-    /*displayres.textContent = `${currentPlayer}'s turn`;*/
 }
+
+
+
 function checkWinner(){
     let roundWon = false;
 
@@ -66,6 +67,7 @@ function checkWinner(){
   else if(!options.includes("")){
       displayres.textContent = `Draw!`;
       running = false;
+      
   }
   else{
       changePlayer();
@@ -75,8 +77,8 @@ function checkWinner(){
 function restartGame(){
   currentPlayer = "X";
   options = ["", "", "", "", "", "", "", "", ""];
-  displayres.textContent = `${currentPlayer}'s turn`;
   cells.forEach(cell => cell.textContent = "");
+  displayres.textContent="";
   running = true;
   
   };
